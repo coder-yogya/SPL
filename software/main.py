@@ -34,7 +34,7 @@ def analyze_sentiments(
 
 # Usage
 test_inputs = [
-    "I love this movie so so so so much",
+    "I love this movie",
     "I hate this movie",
     "I am happy",
     "I am sad",
