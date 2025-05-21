@@ -45,5 +45,6 @@ test_inputs = [
 results = analyze_sentiments(test_inputs, min_confidence=0.6)
 
 # Display results
+
 for result in results:
     print(f"\nText: {result['text']}\nSentiment: {result['sentiment']}\nConfidence: {result['confidence']}")
