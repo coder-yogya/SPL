@@ -1,0 +1,9 @@
+transformers
+torch
+huggingface_hub
+transformers
+ollama
+langchain-community
+langchain-ollama
+pandas
+numpy

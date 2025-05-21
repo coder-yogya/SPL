@@ -1,13 +1,12 @@
-from huggingface_hub import snapshot_download
+from transformers import pipeline
 
-snapshot_download("tatsu-lab/alpaca")
+classifier = pipeline("sentiment-analysis")
 
-# chat with the model:
+print(classifier("I love this movie so so so so much"))
 
-from transformers import AutoModelForCausalLM, AutoTokenizer
+print(classifier("I hate this movie"))
 
-model = AutoModelForCausalLM.from_pretrained("tatsu-lab/alpaca")
-tokenizer = AutoTokenizer.from_pretrained("tatsu-lab/alpaca")
+print(classifier("I am happy"))
 
-inputs = tokenizer("Tell me a joke.", return_tensors="pt")
-outputs = model.generate(**inputs)
+print(classifier("I am sad"))
+
