@@ -1,0 +1,337 @@
+/* Body.css */
+@import url('https://fonts.googleapis.com/css2?family=Iceland&family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&family=Righteous&display=swap');
+
+:root {
+  --main-bg: #222;
+  --text: #fff;
+  --primary: #6b00f5;
+  --cta: #ff5733;
+  --highlight-grad: linear-gradient(90deg, #6b00f5, #a166ff, #00ffd1);
+  --font-heading: 'Golos';
+  --font-body: 'Righteous';
+}
+
+.main-content {
+  font-family: var(--font-body);
+  background: var(--main-bg);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+}
+
+.hero {
+  height: 100vh;
+  background: url('/assets/images/hero.png') center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 0 1rem;
+  max-width: 800px;
+  width: 100%;
+}
+
+.hero-title {
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0 auto 20px;
+}
+
+.highlight {
+  background: var(--highlight-grad);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 700;
+  font-family: 'Iceland';
+  display: inline-block;
+  animation: gradientMove 3s linear infinite;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%
+  }
+
+  100% {
+    background-position: 100% 50%
+  }
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin: 10px auto 30px;
+  line-height: 1.4;
+}
+
+.cta-btn {
+  display: inline-block;
+  background: var(--cta);
+  padding: 12px 24px;
+  border-radius: 4px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  transition: background 0.3s;
+}
+
+.cta-btn:hover {
+  background: #e63900;
+}
+
+
+
+.about-us {
+  position: relative;
+  padding: 60px 2rem;
+  background: url('/assets/images/stadium.png') center/cover no-repeat;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+.about-us::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  /* dark transparent overlay */
+  z-index: 1;
+}
+
+.about-us h2,
+.about-us p {
+  position: relative;
+  z-index: 2;
+  /* bring text above the overlay */
+}
+
+.about-us h2 {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+.about-us p {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+  line-height: 1.8;
+  background: rgba(0, 0, 0, 0.7);
+  /* slightly darker */
+  border-radius: 20px;
+  padding: 20px;
+  font-size: 1.1rem;
+}
+
+.teams {
+  padding: 60px 2rem;
+  text-align: center;
+  background: url('/assets/images/ball.png') center/cover no-repeat;
+}
+
+.teams h2 {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 30px;
+}
+
+.team-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.team-card {
+  background: #000000a8;
+  padding: 20px;
+  border-radius: 8px;
+  transition: transform .3s;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+}
+
+.team-logo {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.team-card h3 {
+  margin: 0 0 5px;
+}
+
+.team-card p {
+  margin: 2px 0;
+  font-size: .9rem;
+}
+
+.sponsors {
+  padding: 60px 2rem;
+  background: #121212;
+  text-align: center;
+}
+
+.sponsors h2 {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 30px;
+}
+
+.sponsor-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.sponsor-logos img {
+  max-width: 120px;
+  filter: brightness(.8);
+  transition: filter .3s;
+}
+
+.sponsor-logos img:hover {
+  filter: brightness(1);
+}
+
+/* Body.css */
+.team-logo-img {
+  width: 80px;
+  /* Set the size of the logo */
+  height: 80px;
+  /* Ensure it's square */
+  border-radius: 50%;
+  /* Makes it circular */
+  object-fit: cover;
+  /* Ensures the image covers the container without distortion */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  /* Optional: Adds shadow for better effect */
+  transition: transform 0.3s ease;
+}
+
+.team-logo-img:hover {
+  transform: scale(1.1);
+  /* Slight zoom effect on hover */
+}
+
+/* Call to Action Footer */
+.footer-cta {
+  padding: 60px 2rem;
+  background: url('/assets/images/trophy.png') center/cover no-repeat;
+  text-align: center;
+  position: relative;
+}
+
+.footer-cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.footer-cta h2 {
+  position: relative;
+  z-index: 1;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.footer-cta .highlight {
+  background: none;
+  background-clip: border-box;
+  color: var(--cta);
+}
+
+.footer-cta .cta-btn {
+  position: relative;
+  z-index: 1;
+}
+
+/* Apply Golos Text to headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+}
+
+/* Apply Righteous to body text */
+body,
+p,
+.main-content {
+  font-family: var(--font-body);
+}
+
+.nav-icon {
+  color: blue;
+}
+
+.nav-icon-button {
+  background-color: #1e3a8a;
+  /* Blue background color */
+  border-radius: 50%;
+  /* Make it round */
+  padding: 10px;
+  color: white;
+  /* Icon color */
+  transition: background-color 0.3s ease;
+}
+
+.nav-icon-button:hover {
+  background-color: #2563eb;
+}
+
+.nav-icon {
+  font-size: 1.5rem;
+}
+
+.navbar-menu a.active-url {
+  color: #2563eb;
+}
+
+.navbar-title .mobile-break {
+  display: inline;
+}
+
+@media (max-width: 767px) {
+
+  /* Only for mobile devices */
+  .navbar-title .mobile-break {
+    display: inline;
+    /* Show the break tag on mobile */
+  }
+}
+
+@media (min-width: 768px) {
+
+  /* For tablets and above */
+  .navbar-title .mobile-break {
+    display: none;
+    /* Hide the break tag on tablets and larger screens */
+  }
+}

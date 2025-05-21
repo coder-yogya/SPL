@@ -1,0 +1,12 @@
+@media (max-width: 600px) {
+  .container {
+    padding: 10px;
+    width: 100%;
+    overflow-x: hidden; /* prevent horizontal scroll */
+  }
+  img, video {
+    max-width: 100%; /* scale media */
+    height: auto;
+  }
+  /* adjust font sizes, margins, etc */
+}

@@ -1,0 +1,130 @@
+/* Import Montserrat font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Root variables */
+:root {
+  --cricket-blue: #0066cc; /* SPL primary blue */
+  --accent-yellow: #ffdd57; /* SPL accent yellow */
+  --accent-white: #ffffff;
+  --bg-dark: rgba(0, 0, 0, 0.7); /* Deeper dark background */
+  --fg-light: #e0e0e0; /* Light foreground for text */
+  --table-border: #444; /* Darker subtle border */
+  --transition-fast: 0.2s ease-out;
+}
+
+/* Body styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: url('/assets/images/hero.png') center/cover no-repeat fixed;
+  color: var(--fg-light);
+}
+
+/* Main container */
+.scheduled-container {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: var(--bg-dark);
+  border-radius: 12px;
+  border: 2px solid var(--cricket-blue);
+  box-shadow:
+    0 0 12px rgba(0, 102, 204, 0.5),
+    inset 0 0 6px rgba(255, 255, 255, 0.05);
+}
+
+/* Title */
+.scheduled-container h2 {
+  text-align: center;
+  color: var(--accent-yellow);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--cricket-blue);
+  padding-bottom: 0.5rem;
+}
+
+/* Table */
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+}
+
+/* Table header */
+.schedule-table th {
+  background-color: var(--cricket-blue);
+  color: var(--accent-white);
+  padding: 1rem;
+  text-align: left;
+  font-weight: 700;
+  border-bottom: 2px solid var(--accent-yellow);
+  font-size: 1.1rem;
+}
+
+/* Table body cells */
+.schedule-table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--table-border);
+  color: var(--fg-light);
+  font-size: 1rem;
+}
+
+/* Hover effect on rows */
+.schedule-table tr:hover {
+  background-color: rgba(0, 102, 204, 0.2);
+  transition: background-color var(--transition-fast);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  /* Adjust container padding and margins for smaller screens */
+  .scheduled-container {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+
+  /* Adjust title font size for smaller screens */
+  .scheduled-container h2 {
+    font-size: 2rem;
+  }
+
+  /* Adjust table font size for smaller screens */
+  .schedule-table th,
+  .schedule-table td {
+    font-size: 0.9rem;
+    padding: 0.75rem;
+  }
+
+  /* Adjust table layout for smaller screens */
+  .schedule-table {
+    font-size: 0.9rem; /* Slightly smaller font size for table */
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Further adjust styles for smaller mobile screens */
+  .scheduled-container {
+    padding: 1rem;
+    margin: 0.5rem;
+  }
+
+  .scheduled-container h2 {
+    font-size: 1.8rem; /* Reduce title size for very small screens */
+  }
+
+  .schedule-table th,
+  .schedule-table td {
+    font-size: 0.85rem; /* Even smaller font size for small mobile screens */
+    padding: 0.5rem; /* Reduce padding in the table for compact view */
+  }
+
+  .schedule-table {
+    font-size: 0.85rem; /* Reduce font size */
+    margin-top: 0.5rem;
+  }
+}

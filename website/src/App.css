@@ -1,0 +1,53 @@
+/* Default Styles (for larger screens like tablets, laptops, and desktops) */
+.navbar-title {
+  font-size: 2rem; /* Larger font size for tablets and above */
+  text-align: center;
+}
+
+.navbar-menu {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Mobile View Styles (for screens below 768px) */
+@media (max-width: 767px) {
+  .navbar-title {
+    font-size: 1.5rem; /* Smaller font size for mobile */
+    text-align: center; /* Ensure the text is centered */
+    padding: 10px;
+  }
+
+  .navbar-logo {
+    width: 80px; /* Adjust logo size for smaller screens */
+  }
+
+  .navbar-menu {
+    flex-direction: column; /* Stack menu items vertically on mobile */
+    align-items: center; /* Center-align items */
+  }
+
+  .navbar-menu a {
+    font-size: 1rem; /* Adjust font size for navigation links */
+    margin: 10px 0; /* Add some space between menu items */
+  }
+
+  .hamburger {
+    display: block; /* Show hamburger menu on mobile */
+  }
+}
+
+/* Tablet View and Larger (min-width 768px) */
+@media (min-width: 768px) {
+
+  .navbar-logo {
+    width: 100px; /* Adjust logo size for tablets */
+  }
+
+  .navbar-title {
+    font-size: 2rem; /* Default size for tablets and larger devices */
+  }
+
+  .hamburger {
+    display: none; /* Hide hamburger menu on tablets and larger screens */
+  }
+}

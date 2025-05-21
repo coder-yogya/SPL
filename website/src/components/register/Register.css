@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+:root {
+--cricket-blue: #0066cc;
+--accent-yellow: #ffdd57;
+--accent-white: #ffffff;
+--bg-dark: rgba(0, 0, 0, 0.6);
+--fg-light: #e0e0e0;
+--error-red: #e53935;
+--transition-fast: 0.2s ease-out;
+}
+
+body {
+margin: 0;
+padding: 0;
+background: url('/assets/images/hero.png') center/cover no-repeat fixed;
+font-family: 'Montserrat', sans-serif;
+color: var(--fg-light);
+}
+
+/* translucent form panel */
+.spl-form-container {
+max-width: 400px;
+margin: 4rem auto;
+padding: 2rem;
+position: relative;
+background: var(--bg-dark);
+border-radius: 12px;
+border: 2px solid var(--cricket-blue);
+box-shadow:
+0 0 12px rgba(0,102,204,0.6),
+inset 0 0 8px rgba(255,255,255,0.1);
+}
+
+/* header styling */
+.spl-form-container h2 {
+text-align: center;
+margin-bottom: 1.5rem;
+color: var(--cricket-blue);
+font-size: 2rem;
+letter-spacing: 1px;
+border-bottom: 2px solid var(--accent-yellow);
+padding-bottom: 0.5rem;
+}
+
+/* form fields */
+.form-group {
+margin-bottom: 1.25rem;
+}
+
+.form-group label {
+display: block;
+margin-bottom: 0.5rem;
+font-weight: 700;
+color: var(--accent-yellow);
+}
+
+.form-group input {
+width: 100%;
+padding: 0.75rem 1rem;
+border: 2px solid rgba(255,255,255,0.2);
+border-radius: 6px;
+background: rgba(255,255,255,0.05);
+color: var(--fg-light);
+font-size: 1rem;
+transition: border var(--transition-fast), background var(--transition-fast);
+}
+
+.form-group input::placeholder {
+color: rgba(224,224,224,0.6);
+}
+
+.form-group input:focus {
+outline: none;
+background: rgba(0,0,0,0.7);
+border-color: var(--cricket-blue);
+}
+
+/* error animation */
+.error {
+display: block;
+margin-top: 0.25rem;
+color: var(--error-red);
+font-size: 0.875rem;
+animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+0%,100% { transform: translateX(0); }
+25% { transform: translateX(-3px); }
+75% { transform: translateX(3px); }
+}
+
+/* button base */
+.spl-form-container button {
+display: block;
+width: 100%;
+padding: 0.85rem;
+margin-top: 0.5rem;
+border: none;
+border-radius: 6px;
+font-size: 1.1rem;
+font-weight: 700;
+text-transform: uppercase;
+letter-spacing: 1px;
+cursor: pointer;
+transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
+}
+
+/* Pay button styling */
+.pay-btn {
+background: var(--accent-yellow);
+color: var(--cricket-blue);
+box-shadow: 0 0 6px rgba(255, 221, 87, 0.6);
+}
+.pay-btn:hover {
+background: #ffe57f;
+transform: translateY(-2px);
+box-shadow: 0 0 10px rgba(255, 221, 87, 0.8);
+}
+.pay-btn:active {
+transform: translateY(0);
+box-shadow: 0 0 4px rgba(255, 221, 87, 0.6);
+}
+
+/* Register button styling */
+button[type="submit"] {
+background: var(--cricket-blue);
+color: var(--accent-white);
+box-shadow: 0 0 6px rgba(0,102,204,0.6);
+}
+button[type="submit"]:hover {
+background: #005bb5;
+transform: translateY(-2px);
+box-shadow: 0 0 10px rgba(0,102,204,0.8);
+}
+button[type="submit"]:active {
+transform: translateY(0);
+box-shadow: 0 0 4px rgba(0,102,204,0.6);
+}
+
