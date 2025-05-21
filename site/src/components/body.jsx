@@ -750,7 +750,6 @@ export default function Body() {
             <InstagramIcon sx={{ color: '#e54179' }} />
           </a>
           <a href="https://x.com/2025spl" target="_blank" rel="noopener noreferrer">
-            <XIcon sx={{ color: '#1DA1F2' }} />
             <XIcon sx={{ color: '#000000' }} />
           </a>
           <a href="https://www.youtube.com/@SangharshPremierLeague" target="_blank" rel="noopener noreferrer">
