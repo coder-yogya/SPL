@@ -20,6 +20,6 @@ sentiment_pipeline = pipeline(
     model="distilbert-base-uncased-finetuned-sst-2-english"
 )
 
-result = sentiment_pipeline("I love using Jetbrians Fleet code editor. It's amazing! , It's extraordinary!s")
+result = sentiment_pipeline("I love using Jetbrians Fleet code editor. It's amazing! , It's extraordinary!")
 
-print(result)
+print(f"Sentiment: {result}")
