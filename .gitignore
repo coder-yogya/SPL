@@ -1,3 +1,4 @@
-.idea
-.fleet
+.idea/
+.fleet/
 *.zip
+*.DS_Store
