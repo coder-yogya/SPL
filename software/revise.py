@@ -15,3 +15,10 @@ print(f"DataFrame: \n {df}")
 
 # Transformers
 
+from transformers import pipeline
+
+sentiment = pipeline('sentiment-analysis')
+text = "hello from here!"
+
+result = sentiment(text)
+print(result)
