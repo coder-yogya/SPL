@@ -22,7 +22,7 @@ according to the model’s structure and capabilities.
 - Summarization: `Qwen2`
 - Image Generation: `DALL·E` (via api as we cannot install it locally m2 is not a powerhouse)
 - Text Generation: `GPT-2`
-- more....
+- more...
 
 These classes will be modularly imported and invoked in `main.py` and first been loaded in `load.py`.
 
