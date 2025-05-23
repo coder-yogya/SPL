@@ -98,7 +98,7 @@ class ToneAnalyzer:
         task_keywords = ["create", "build", "write", "generate", "fix", "update", "design", "implement"]
         return any(keyword in text.lower() for keyword in task_keywords)
 
-class BlenderBotTrendAnalyzer:
+class BlenderBot:
     def __init__(self):
         model_id = "facebook/blenderbot-1B-distill"
         local_dir = "models/blenderbot-1b-distill"
