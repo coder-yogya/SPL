@@ -20,7 +20,7 @@ model sizes and performance for Apple Silicon (M2 chip).
 according to the model’s structure and capabilities.
 5. Assign models based on task specialization:
 - Summarization: `Qwen2`
-- Image Generation: `DALL·E`
+- Image Generation: `DALL·E` (via api as we cannot install it locally m2 is not a powerhouse)
 - Text Generation: `GPT-2`
 - more....
 
