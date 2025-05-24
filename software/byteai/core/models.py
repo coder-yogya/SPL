@@ -1,4 +1,7 @@
 """
+
+OM NAMAH SHIVAY
+
 © 2025 ByteAI INC. ALL RIGHTS RESERVED.
 
 -----------------------------------------------------------
